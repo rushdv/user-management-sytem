@@ -66,6 +66,7 @@ main()
     char choice;
     do
     {
+        system("cls");
         cout << "\n\n\t\t1. Register User" << endl;
         cout << "\t\t2. Login" << endl;
         cout << "\t\t3. Show User List" << endl;
@@ -92,7 +93,7 @@ main()
             break;
         }
         }
-        cout << "Do you want to continue [Y/N]? :";
+        cout << "\t\tDo you want to continue [Y/N]? :";
         cin >> choice;
     } while (choice == 'y' || choice == 'Y');
 }
