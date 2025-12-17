@@ -56,6 +56,14 @@ public:
         cout << "\t\tInvalid User Name or Password !" << endl;
         return false;
     }
+
+    void showUser(){
+        cout << "\n\t\t========== User List ==========" << endl;
+        for(int i = 0; i<users.size(); i++){
+            cout << "\t\t" << users[i].getUsername() << "\n" << endl;
+        }
+    }
+
 };
 
 main()
@@ -90,6 +98,11 @@ main()
             cout << "\t\tEnter Password: ";
             cin >> password;
             usermanage.LoginUser(username, password);
+            break;
+        }
+        case 3:
+        {
+            usermanage.showUser();
             break;
         }
         }
