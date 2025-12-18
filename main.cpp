@@ -72,6 +72,14 @@ public:
         }
     }
 
+    void deleteUser(string username){
+        for(int i = 0; i<users.size(); i++){
+            if(users[i].getUsername() == username){
+                users.erase(users.begin() + i);
+                cout << "\t\tUser Remove Successfully...." << endl;
+            }
+        }
+    }
 };
 
 main()
@@ -115,10 +123,18 @@ main()
         }
         case 4:
         {
-            string usernaeme;
+            string username;
             cout << "\t\tEnter User Name: ";
             cin >> username;
-            usermanage.searchUser(usernaeme);
+            usermanage.searchUser(username);
+            break;
+        }
+        case 5:
+        {
+            string username;
+            cout << "\t\tEnter User Name: ";
+            cin >> username;
+            usermanage.deleteUser(username);
             break;
         }
         }
