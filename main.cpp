@@ -64,6 +64,14 @@ public:
         }
     }
 
+    void searchUser(string username){
+        for(int i=0; i<users.size(); i++){
+            if(users[i].getUsername() == username){
+                cout << "\t\tUser Found" << endl;
+            }
+        }
+    }
+
 };
 
 main()
@@ -103,6 +111,14 @@ main()
         case 3:
         {
             usermanage.showUser();
+            break;
+        }
+        case 4:
+        {
+            string usernaeme;
+            cout << "\t\tEnter User Name: ";
+            cin >> username;
+            usermanage.searchUser(usernaeme);
             break;
         }
         }
