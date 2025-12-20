@@ -60,7 +60,7 @@ public:
     void showUser(){
         cout << "\n\t\t========== User List ==========" << endl;
         for(int i = 0; i<users.size(); i++){
-            cout << "\t\t" << users[i].getUsername() << "\n" << endl;
+            cout << "\t\t" << users[i].getUsername() << endl;
         }
     }
 
@@ -136,6 +136,10 @@ main()
             cin >> username;
             usermanage.deleteUser(username);
             break;
+        }
+        case 6:
+        {
+            exit(1);
         }
         }
         cout << "\t\tDo you want to continue [Y/N]? :";
